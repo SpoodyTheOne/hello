@@ -1,0 +1,15 @@
+<script>
+
+var cookies = document.cookie;
+var cookieTest = cookies.includes("name=")
+
+if (cookieTest == true) {
+var name = cookies.split("=");
+var nameFinal = nameFinal(name[name.length-1]);
+alert("welcome back" + nameFinal)
+} else {
+var name = prompt("what is your name");
+alert("hello " + name)
+document.cookie = "name=" + name;
+}
+</script>
